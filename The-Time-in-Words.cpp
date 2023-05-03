@@ -52,3 +52,27 @@ string timeInWords(int h, int m)
  
     return result;
 }
+
+
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    string h_temp;
+    getline(cin, h_temp);
+
+    int h = stoi(ltrim(rtrim(h_temp)));
+
+    string m_temp;
+    getline(cin, m_temp);
+
+    int m = stoi(ltrim(rtrim(m_temp)));
+
+    string result = timeInWords(h, m);
+
+    fout << result << "\n";
+
+    fout.close();
+
+    return 0;
+}
